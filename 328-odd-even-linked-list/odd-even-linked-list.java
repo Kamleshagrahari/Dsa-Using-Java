@@ -37,7 +37,7 @@ curr.next=head2;
         
         
        }else{
-      
+      curr.next=null;
         prev.next=head2;
        }
        return head;
