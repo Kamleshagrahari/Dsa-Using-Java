@@ -21,7 +21,7 @@ class Solution {
         }
         ListNode prev=head;
         ListNode curr=head.next;
-        ListNode head2=curr;
+        ListNode head2=head.next;
         int i=0;
 
 
