@@ -3,18 +3,16 @@ class Solution {
     {
         int n=nums.length;
         k=k%n;
-        rev(nums,0,n-1);
-        rev(nums,0,k-1);
-        rev(nums,k,n-1);
-        
-    }
-    public void rev(int[] nums,int s,int e){
-        while(s<e){
-        int temp=nums[s];
-        nums[s]=nums[e];
-        nums[e]=temp;
-        s++;
-        e--;
+        int[] temp=new int[n];
+        int z=0;
+        for(int i=n-k;i<n;i++){
+            temp[z++]=nums[i];
+        }
+        for(int i=0;i<n-k;i++){
+            temp[z++]=nums[i];
+        }
+        for(int i=0;i<n;i++){
+            nums[i]=temp[i];
         }
     }
 }
